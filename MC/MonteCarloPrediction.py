@@ -90,18 +90,3 @@ plotting.plot_value_function(V_10k, title="10,000 Steps")
 
 V_500k = mc_prediction(sample_policy, env, num_episodes=500000)
 plotting.plot_value_function(V_500k, title="500,000 Steps")
-
-#### Cheating
-
-        # Find all states the we've visited in this episode
-        # We convert each state to a tuple so that we can use it as a dict key
-        # states_in_episode = set([tuple(x[0]) for x in episode])
-        # for state in states_in_episode:
-            # Find the first occurance of the state in the episode
-            # first_occurence_idx = next(i for i,x in enumerate(episode) if x[0] == state)
-            # Sum up all rewards since the first occurance
-            # G = sum([x[2]*(discount_factor**i) for i,x in enumerate(episode[first_occurence_idx:])])
-            # Calculate average return for this state over all sampled episodes
-            # returns_sum[state] += G
-            # returns_count[state] += 1.0
-            # V[state] = returns_sum[state] / returns_count[state]
