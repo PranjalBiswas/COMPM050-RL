@@ -2,6 +2,7 @@ import gym
 from gym import spaces
 from gym.utils import seeding
 
+# a > b : 1, a = b : 0, a < b : -1
 def cmp(a, b):
     return int((a > b)) - int((a < b))
 
@@ -42,7 +43,7 @@ def is_natural(hand):  # Is this hand a natural blackjack?
 class BlackjackEnv(gym.Env):
     """Simple blackjack environment
     Blackjack is a card game where the goal is to obtain cards that sum to as
-    near as possible to 21 without going over.  They're playing against a fixed
+    near as possible to 21 without going over. They're playing against a fixed
     dealer.
     Face cards (Jack, Queen, King) have point value 10.
     Aces can either count as 11 or 1, and it's called 'usable' at 11.
@@ -65,18 +66,18 @@ class BlackjackEnv(gym.Env):
     https://webdocs.cs.ualberta.ca/~sutton/book/the-book.html
     """
     def __init__(self, natural=False):
-        self.action_space = spaces.Discrete(2)
+        self.action_space = spaces.Discrete(2) # hit or stick
         self.observation_space = spaces.Tuple((
-            spaces.Discrete(32),
-            spaces.Discrete(11),
-            spaces.Discrete(2)))
+            spaces.Discrete(32), # my current sum
+            spaces.Discrete(11), # dealer's showing card
+            spaces.Discrete(2))) # whether hold ace or not
         self._seed()
 
         # Flag to payout 1.5 on a "natural" blackjack win, like casino rules
         # Ref: http://www.bicyclecards.com/how-to-play/blackjack/
         self.natural = natural
         # Start the first game
-        self._reset()        # Number of 
+        self._reset()        # Number of
         self.nA = 2
 
     def _seed(self, seed=None):
