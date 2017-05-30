@@ -4,18 +4,17 @@ import matplotlib
 import numpy as np
 import pandas as pd
 import sys
-from gym import wrappers
 
 if "../" not in sys.path:
   sys.path.append("../")
 
 from collections import defaultdict
-from lib.envs.windy_gridworld import WindyGridworldEnv
+from lib.envs.cliff_walking import CliffWalkingEnv
 from lib import plotting
 
 matplotlib.style.use('ggplot')
 
-env = WindyGridworldEnv()
+env = CliffWalkingEnv()
 
 def make_epsilon_greedy_policy(Q, epsilon, nA):
     """
@@ -39,9 +38,10 @@ def make_epsilon_greedy_policy(Q, epsilon, nA):
         return A
     return policy_fn
 
-def sarsa(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):
+def q_learning(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):
     """
-    SARSA algorithm: On-policy TD control. Finds the optimal epsilon-greedy policy.
+    Q-Learning algorithm: Off-policy TD control. Finds the optimal greedy policy
+    while following an epsilon-greedy policy
 
     Args:
         env: OpenAI environment.
@@ -51,7 +51,7 @@ def sarsa(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):
         epsilon: Chance the sample a random action. Float betwen 0 and 1.
 
     Returns:
-        A tuple (Q, stats).
+        A tuple (Q, episode_lengths).
         Q is the optimal action-value function, a dictionary mapping state -> action values.
         stats is an EpisodeStats object with two numpy arrays for episode_lengths and episode_rewards.
     """
@@ -74,36 +74,28 @@ def sarsa(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):
             print("\rEpisode {}/{}.".format(i_episode, num_episodes), end="")
             sys.stdout.flush()
 
-        #Initialize
         state = env.reset()
-        action_probs = policy(state)
-        action = np.random.choice(np.arange(len(action_probs)), p=action_probs)
-
-        # Q update
         for t in itertools.count():
+            action_probs = policy(state)
+            action = np.random.choice(np.arange(len(action_probs)), p = action_probs)
             next_state, reward, done, _ = env.step(action)
-            # env.render()
-            next_action_probs = policy(next_state)
-            next_action = np.random.choice(np.arange(len(action_probs)), p=next_action_probs)
 
             stats.episode_rewards[i_episode] += reward
             stats.episode_lengths[i_episode] = t
 
-            td_target = reward + Q[next_state][next_action]
+            best_next_action = np.argmax(Q[next_state])
+            td_target = reward + discount_factor * Q[next_state][best_next_action]
             td_delta = td_target - Q[state][action]
             Q[state][action] += alpha * td_delta
 
             if done:
                 break
-
-            action = next_action
             state = next_state
 
     return Q, stats
 
-Q, stats = sarsa(env, 2000)
+Q, stats = q_learning(env, 500)
 plotting.plot_episode_stats(stats)
-
 
 a=np.zeros(env.nS)
 for i in range(env.nS):

@@ -61,7 +61,6 @@ class CliffWalkingEnv(discrete.DiscreteEnv):
 
         for s in range(self.nS):
             position = np.unravel_index(s, self.shape)
-            # print(self.s)
             if self.s == s:
                 output = " x "
             elif position == (3,11):
@@ -72,9 +71,9 @@ class CliffWalkingEnv(discrete.DiscreteEnv):
                 output = " o "
 
             if position[1] == 0:
-                output = output.lstrip() 
+                output = output.lstrip()
             if position[1] == self.shape[1] - 1:
-                output = output.rstrip() 
+                output = output.rstrip()
                 output += "\n"
 
             outfile.write(output)
