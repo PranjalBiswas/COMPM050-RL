@@ -48,6 +48,7 @@ class WindyGridworldEnv(discrete.DiscreteEnv):
             P[s][LEFT] = self._calculate_transition_prob(position, [0, -1], winds)
 
         # We always start in state (3, 0)
+        # Initial state distribution
         isd = np.zeros(nS)
         isd[np.ravel_multi_index((3,0), self.shape)] = 1.0
 
