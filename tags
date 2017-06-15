@@ -1,0 +1,463 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AtariEnvWrapper	lib/atari/helpers.py	/^class AtariEnvWrapper(object):$/;"	c
+Axes3D	lib/plotting.py	/^from mpl_toolkits.mplot3d import Axes3D$/;"	i
+BlackjackEnv	MC/MonteCarloEpsilonGreedy.py	/^from lib.envs.blackjack import BlackjackEnv$/;"	i
+BlackjackEnv	MC/MonteCarloOffPolicy.py	/^from lib.envs.blackjack import BlackjackEnv$/;"	i
+BlackjackEnv	MC/MonteCarloPrediction.py	/^from lib.envs.blackjack import BlackjackEnv$/;"	i
+BlackjackEnv	lib/envs/blackjack.py	/^class BlackjackEnv(gym.Env):$/;"	c
+CHECKPOINT_DIR	PolicyGradient/a3c/train.py	/^CHECKPOINT_DIR = os.path.join(MODEL_DIR, "checkpoints")$/;"	v
+CliffWalkingEnv	PolicyGradient/ReinforceBaseline.py	/^from lib.envs.cliff_walking import CliffWalkingEnv$/;"	i
+CliffWalkingEnv	TD/QLearning.py	/^from lib.envs.cliff_walking import CliffWalkingEnv$/;"	i
+CliffWalkingEnv	lib/envs/cliff_walking.py	/^class CliffWalkingEnv(discrete.DiscreteEnv):$/;"	c
+DOWN	lib/envs/cliff_walking.py	/^DOWN = 2$/;"	v
+DOWN	lib/envs/gridworld.py	/^DOWN = 2$/;"	v
+DOWN	lib/envs/windy_gridworld.py	/^DOWN = 2$/;"	v
+EpisodeStats	lib/plotting.py	/^EpisodeStats = namedtuple("Stats",["episode_lengths", "episode_rewards"])$/;"	v
+Estimator	DQN/dqn.py	/^class Estimator():$/;"	c
+Estimator	FA/QLearningwithValueFuncApprox.py	/^class Estimator():$/;"	c
+FLAGS	PolicyGradient/a3c/train.py	/^FLAGS = tf.flags.FLAGS$/;"	v
+GridworldEnv	DP/PolicyEvaluation.py	/^from lib.envs.gridworld import GridworldEnv$/;"	i
+GridworldEnv	DP/PolicyIteration.py	/^from lib.envs.gridworld import GridworldEnv$/;"	i
+GridworldEnv	DP/ValueIteration.py	/^from lib.envs.gridworld import GridworldEnv$/;"	i
+GridworldEnv	lib/envs/gridworld.py	/^class GridworldEnv(discrete.DiscreteEnv):$/;"	c
+LEFT	lib/envs/cliff_walking.py	/^LEFT = 3$/;"	v
+LEFT	lib/envs/gridworld.py	/^LEFT = 3$/;"	v
+LEFT	lib/envs/windy_gridworld.py	/^LEFT = 3$/;"	v
+MODEL_DIR	PolicyGradient/a3c/train.py	/^MODEL_DIR = FLAGS.model_dir$/;"	v
+Monitor	PolicyGradient/a3c/policy_monitor.py	/^from gym.wrappers import Monitor$/;"	i
+NUM_WORKERS	PolicyGradient/a3c/train.py	/^  NUM_WORKERS = FLAGS.parallelism$/;"	v
+NUM_WORKERS	PolicyGradient/a3c/train.py	/^NUM_WORKERS = multiprocessing.cpu_count()$/;"	v
+PolicyEstimator	PolicyGradient/ReinforceBaseline.py	/^class PolicyEstimator():$/;"	c
+PolicyEstimator	PolicyGradient/a3c/estimator_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+PolicyEstimator	PolicyGradient/a3c/estimators.py	/^class PolicyEstimator():$/;"	c
+PolicyEstimator	PolicyGradient/a3c/policy_monitor.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+PolicyEstimator	PolicyGradient/a3c/policy_monitor_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+PolicyEstimator	PolicyGradient/a3c/train.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+PolicyEstimator	PolicyGradient/a3c/worker.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+PolicyEstimator	PolicyGradient/a3c/worker_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+PolicyEstimatorTest	PolicyGradient/a3c/estimator_test.py	/^class PolicyEstimatorTest(tf.test.TestCase):$/;"	c
+PolicyMonitor	PolicyGradient/a3c/policy_monitor.py	/^class PolicyMonitor(object):$/;"	c
+PolicyMonitor	PolicyGradient/a3c/policy_monitor_test.py	/^from policy_monitor import PolicyMonitor$/;"	i
+PolicyMonitor	PolicyGradient/a3c/train.py	/^from policy_monitor import PolicyMonitor$/;"	i
+PolicyMonitorTest	PolicyGradient/a3c/policy_monitor_test.py	/^class PolicyMonitorTest(tf.test.TestCase):$/;"	c
+RBFSampler	FA/QLearningwithValueFuncApprox.py	/^from sklearn.kernel_approximation import RBFSampler$/;"	i
+RIGHT	lib/envs/cliff_walking.py	/^RIGHT = 1$/;"	v
+RIGHT	lib/envs/gridworld.py	/^RIGHT = 1$/;"	v
+RIGHT	lib/envs/windy_gridworld.py	/^RIGHT = 1$/;"	v
+SGDRegressor	FA/QLearningwithValueFuncApprox.py	/^from sklearn.linear_model import SGDRegressor$/;"	i
+StateProcessor	DQN/dqn.py	/^class StateProcessor():$/;"	c
+StateProcessor	PolicyGradient/a3c/estimator_test.py	/^from lib.atari.state_processor import StateProcessor$/;"	i
+StateProcessor	PolicyGradient/a3c/policy_monitor.py	/^from lib.atari.state_processor import StateProcessor$/;"	i
+StateProcessor	PolicyGradient/a3c/policy_monitor_test.py	/^from lib.atari.state_processor import StateProcessor$/;"	i
+StateProcessor	PolicyGradient/a3c/worker.py	/^from lib.atari.state_processor import StateProcessor$/;"	i
+StateProcessor	PolicyGradient/a3c/worker_test.py	/^from lib.atari.state_processor import StateProcessor$/;"	i
+StateProcessor	lib/atari/state_processor.py	/^class StateProcessor():$/;"	c
+Transition	PolicyGradient/a3c/worker.py	/^Transition = collections.namedtuple("Transition", ["state", "action", "reward", "next_state", "done"])$/;"	v
+UP	lib/envs/cliff_walking.py	/^UP = 0$/;"	v
+UP	lib/envs/gridworld.py	/^UP = 0$/;"	v
+UP	lib/envs/windy_gridworld.py	/^UP = 0$/;"	v
+V	MC/MonteCarloEpsilonGreedy.py	/^V = defaultdict(float)$/;"	v
+V	MC/MonteCarloOffPolicy.py	/^V = defaultdict(float)$/;"	v
+VALID_ACTIONS	DQN/dqn.py	/^VALID_ACTIONS = [0, 1, 2, 3]$/;"	v
+VALID_ACTIONS	PolicyGradient/a3c/estimator_test.py	/^VALID_ACTIONS = [0, 1, 2, 3]$/;"	v
+VALID_ACTIONS	PolicyGradient/a3c/policy_monitor_test.py	/^VALID_ACTIONS = [0, 1, 2, 3]$/;"	v
+VALID_ACTIONS	PolicyGradient/a3c/train.py	/^  VALID_ACTIONS = list(range(4))$/;"	v
+VALID_ACTIONS	PolicyGradient/a3c/train.py	/^  VALID_ACTIONS = list(range(env_.action_space.n))$/;"	v
+VALID_ACTIONS	PolicyGradient/a3c/worker_test.py	/^VALID_ACTIONS = [0, 1, 2, 3]$/;"	v
+V_10k	MC/MonteCarloPrediction.py	/^V_10k = mc_prediction(sample_policy, env, num_episodes=10000)$/;"	v
+V_500k	MC/MonteCarloPrediction.py	/^V_500k = mc_prediction(sample_policy, env, num_episodes=500000)$/;"	v
+ValueEstimator	PolicyGradient/ReinforceBaseline.py	/^class ValueEstimator():$/;"	c
+ValueEstimator	PolicyGradient/a3c/estimator_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+ValueEstimator	PolicyGradient/a3c/estimators.py	/^class ValueEstimator():$/;"	c
+ValueEstimator	PolicyGradient/a3c/policy_monitor.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+ValueEstimator	PolicyGradient/a3c/policy_monitor_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+ValueEstimator	PolicyGradient/a3c/train.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+ValueEstimator	PolicyGradient/a3c/worker.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+ValueEstimator	PolicyGradient/a3c/worker_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
+ValueEstimatorTest	PolicyGradient/a3c/estimator_test.py	/^class ValueEstimatorTest(tf.test.TestCase):$/;"	c
+WindyGridworldEnv	TD/Sarsa.py	/^from lib.envs.windy_gridworld import WindyGridworldEnv$/;"	i
+WindyGridworldEnv	TD/WindyGridWorldEnv.py	/^from lib.envs.windy_gridworld import WindyGridworldEnv$/;"	i
+WindyGridworldEnv	lib/envs/windy_gridworld.py	/^class WindyGridworldEnv(discrete.DiscreteEnv):$/;"	c
+Worker	PolicyGradient/a3c/train.py	/^from worker import Worker$/;"	i
+Worker	PolicyGradient/a3c/worker.py	/^class Worker(object):$/;"	c
+Worker	PolicyGradient/a3c/worker_test.py	/^from worker import Worker$/;"	i
+WorkerTest	PolicyGradient/a3c/worker_test.py	/^class WorkerTest(tf.test.TestCase):$/;"	c
+__getattr__	lib/atari/helpers.py	/^  def __getattr__(self, name):$/;"	m	class:AtariEnvWrapper	file:
+__init__	DQN/dqn.py	/^    def __init__(self):$/;"	m	class:StateProcessor
+__init__	DQN/dqn.py	/^    def __init__(self, scope="estimator", summaries_dir=None):$/;"	m	class:Estimator
+__init__	FA/QLearningwithValueFuncApprox.py	/^    def __init__(self):$/;"	m	class:Estimator
+__init__	PolicyGradient/ReinforceBaseline.py	/^    def __init__(self, learning_rate=0.01, scope="policy_estimator"):$/;"	m	class:PolicyEstimator
+__init__	PolicyGradient/ReinforceBaseline.py	/^    def __init__(self, learning_rate=0.1, scope="value_estimator"):$/;"	m	class:ValueEstimator
+__init__	PolicyGradient/a3c/estimators.py	/^  def __init__(self, num_outputs, reuse=False, trainable=True):$/;"	m	class:PolicyEstimator
+__init__	PolicyGradient/a3c/estimators.py	/^  def __init__(self, reuse=False, trainable=True):$/;"	m	class:ValueEstimator
+__init__	PolicyGradient/a3c/policy_monitor.py	/^  def __init__(self, env, policy_net, summary_writer, saver=None):$/;"	m	class:PolicyMonitor
+__init__	PolicyGradient/a3c/worker.py	/^  def __init__(self, name, env, policy_net, value_net, global_counter, discount_factor=0.99, summary_writer=None, max_global_steps=None):$/;"	m	class:Worker
+__init__	lib/atari/helpers.py	/^  def __init__(self, env):$/;"	m	class:AtariEnvWrapper
+__init__	lib/atari/state_processor.py	/^    def __init__(self):$/;"	m	class:StateProcessor
+__init__	lib/envs/blackjack.py	/^    def __init__(self, natural=False):$/;"	m	class:BlackjackEnv
+__init__	lib/envs/cliff_walking.py	/^    def __init__(self):$/;"	m	class:CliffWalkingEnv
+__init__	lib/envs/gridworld.py	/^    def __init__(self, shape=[4,4]):$/;"	m	class:GridworldEnv
+__init__	lib/envs/windy_gridworld.py	/^    def __init__(self):$/;"	m	class:WindyGridworldEnv
+_build_model	DQN/dqn.py	/^    def _build_model(self):$/;"	m	class:Estimator
+_calculate_transition_prob	lib/envs/cliff_walking.py	/^    def _calculate_transition_prob(self, current, delta):$/;"	m	class:CliffWalkingEnv
+_calculate_transition_prob	lib/envs/windy_gridworld.py	/^    def _calculate_transition_prob(self, current, delta, winds):$/;"	m	class:WindyGridworldEnv
+_get_obs	lib/envs/blackjack.py	/^    def _get_obs(self):$/;"	m	class:BlackjackEnv
+_limit_coordinates	lib/envs/cliff_walking.py	/^    def _limit_coordinates(self, coord):$/;"	m	class:CliffWalkingEnv
+_limit_coordinates	lib/envs/windy_gridworld.py	/^    def _limit_coordinates(self, coord):$/;"	m	class:WindyGridworldEnv
+_policy_net_predict	PolicyGradient/a3c/policy_monitor.py	/^  def _policy_net_predict(self, state, sess):$/;"	m	class:PolicyMonitor
+_policy_net_predict	PolicyGradient/a3c/worker.py	/^  def _policy_net_predict(self, state, sess):$/;"	m	class:Worker
+_render	lib/envs/cliff_walking.py	/^    def _render(self, mode='human', close=False):$/;"	m	class:CliffWalkingEnv
+_render	lib/envs/gridworld.py	/^    def _render(self, mode='human', close=False):$/;"	m	class:GridworldEnv
+_render	lib/envs/windy_gridworld.py	/^    def _render(self, mode='human', close=False):$/;"	m	class:WindyGridworldEnv
+_reset	lib/envs/blackjack.py	/^    def _reset(self):$/;"	m	class:BlackjackEnv
+_seed	lib/envs/blackjack.py	/^    def _seed(self, seed=None):$/;"	m	class:BlackjackEnv
+_step	lib/envs/blackjack.py	/^    def _step(self, action):$/;"	m	class:BlackjackEnv
+_value_net_predict	PolicyGradient/a3c/worker.py	/^  def _value_net_predict(self, state, sess):$/;"	m	class:Worker
+a	TD/QLearning.py	/^a=np.zeros(env.nS)$/;"	v
+a	TD/Sarsa.py	/^a=np.zeros(env.nS)$/;"	v
+action_value	MC/MonteCarloEpsilonGreedy.py	/^    action_value = np.max(actions)$/;"	v
+action_value	MC/MonteCarloOffPolicy.py	/^    action_value = np.max(action_values)$/;"	v
+atari_helpers	PolicyGradient/a3c/estimator_test.py	/^from lib.atari import helpers as atari_helpers$/;"	i
+atari_helpers	PolicyGradient/a3c/policy_monitor.py	/^from lib.atari import helpers as atari_helpers$/;"	i
+atari_helpers	PolicyGradient/a3c/policy_monitor_test.py	/^from lib.atari import helpers as atari_helpers$/;"	i
+atari_helpers	PolicyGradient/a3c/train.py	/^from lib.atari import helpers as atari_helpers$/;"	i
+atari_helpers	PolicyGradient/a3c/worker.py	/^from lib.atari import helpers as atari_helpers$/;"	i
+atari_helpers	PolicyGradient/a3c/worker_test.py	/^from lib.atari import helpers as atari_helpers$/;"	i
+atari_make_initial_state	lib/atari/helpers.py	/^def atari_make_initial_state(state):$/;"	f
+atari_make_next_state	lib/atari/helpers.py	/^def atari_make_next_state(state, next_state):$/;"	f
+batch_size	DQN/dqn.py	/^                                    batch_size=32):$/;"	v
+behavior_policy	MC/MonteCarloOffPolicy.py	/^                                           behavior_policy=random_policy)$/;"	v
+build_shared_network	PolicyGradient/a3c/estimators.py	/^def build_shared_network(X, add_summaries=False):$/;"	f
+cmp	lib/envs/blackjack.py	/^def cmp(a, b):$/;"	f
+collections	PolicyGradient/ReinforceBaseline.py	/^import collections$/;"	i
+collections	PolicyGradient/a3c/policy_monitor.py	/^import collections$/;"	i
+collections	PolicyGradient/a3c/policy_monitor_test.py	/^import collections$/;"	i
+collections	PolicyGradient/a3c/worker.py	/^import collections$/;"	i
+collections	PolicyGradient/a3c/worker_test.py	/^import collections$/;"	i
+continuous_eval	PolicyGradient/a3c/policy_monitor.py	/^  def continuous_eval(self, eval_every, sess, coord):$/;"	m	class:PolicyMonitor
+coord	PolicyGradient/a3c/train.py	/^  coord = tf.train.Coordinator()$/;"	v
+copy_model_parameters	DQN/dqn.py	/^def copy_model_parameters(sess, estimator1, estimator2):$/;"	f
+create_greedy_policy	MC/MonteCarloOffPolicy.py	/^def create_greedy_policy(Q):$/;"	f
+create_random_policy	MC/MonteCarloOffPolicy.py	/^def create_random_policy(nA):$/;"	f
+current_path	PolicyGradient/a3c/estimator_test.py	/^current_path = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))$/;"	v
+current_path	PolicyGradient/a3c/policy_monitor.py	/^current_path = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))$/;"	v
+current_path	PolicyGradient/a3c/policy_monitor_test.py	/^current_path = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))$/;"	v
+current_path	PolicyGradient/a3c/train.py	/^current_path = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))$/;"	v
+current_path	PolicyGradient/a3c/worker.py	/^current_path = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))$/;"	v
+current_path	PolicyGradient/a3c/worker_test.py	/^current_path = os.path.dirname(os.path.abspath(getsourcefile(lambda:0)))$/;"	v
+deck	lib/envs/blackjack.py	/^deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]$/;"	v
+deep_q_learning	DQN/dqn.py	/^def deep_q_learning(sess,$/;"	f
+defaultdict	MC/MonteCarloEpsilonGreedy.py	/^from collections import defaultdict$/;"	i
+defaultdict	MC/MonteCarloOffPolicy.py	/^from collections import defaultdict$/;"	i
+defaultdict	MC/MonteCarloPrediction.py	/^from collections import defaultdict$/;"	i
+defaultdict	TD/QLearning.py	/^from collections import defaultdict$/;"	i
+defaultdict	TD/Sarsa.py	/^from collections import defaultdict$/;"	i
+deque	DQN/dqn.py	/^from collections import deque, namedtuple$/;"	i
+discount_factor	DQN/dqn.py	/^                                    discount_factor=0.99,$/;"	v
+discount_factor	PolicyGradient/a3c/train.py	/^      discount_factor = 0.99,$/;"	v
+discrete	lib/envs/cliff_walking.py	/^from gym.envs.toy_text import discrete$/;"	i
+discrete	lib/envs/gridworld.py	/^from gym.envs.toy_text import discrete$/;"	i
+discrete	lib/envs/windy_gridworld.py	/^from gym.envs.toy_text import discrete$/;"	i
+draw_card	lib/envs/blackjack.py	/^def draw_card(np_random):$/;"	f
+draw_hand	lib/envs/blackjack.py	/^def draw_hand(np_random):$/;"	f
+env	DP/PolicyEvaluation.py	/^env = GridworldEnv()$/;"	v
+env	DP/PolicyIteration.py	/^env = GridworldEnv()$/;"	v
+env	DP/ValueIteration.py	/^env = GridworldEnv()$/;"	v
+env	DQN/BreakoutEnv.py	/^env = gym.envs.make("Breakout-v0")$/;"	v
+env	DQN/dqn.py	/^env = gym.envs.make("Breakout-v0")$/;"	v
+env	FA/MountainCarEnv.py	/^env = gym.envs.make("MountainCar-v0")$/;"	v
+env	FA/QLearningwithValueFuncApprox.py	/^env = gym.envs.make("MountainCar-v0")$/;"	v
+env	MC/MonteCarloEpsilonGreedy.py	/^env = BlackjackEnv()$/;"	v
+env	MC/MonteCarloOffPolicy.py	/^env = BlackjackEnv()$/;"	v
+env	MC/MonteCarloPrediction.py	/^env = BlackjackEnv()$/;"	v
+env	PolicyGradient/ReinforceBaseline.py	/^env = CliffWalkingEnv()$/;"	v
+env	PolicyGradient/a3c/train.py	/^      env=make_env(),$/;"	v
+env	PolicyGradient/a3c/train.py	/^    env=make_env(wrap=False),$/;"	v
+env	TD/QLearning.py	/^env = CliffWalkingEnv()$/;"	v
+env	TD/Sarsa.py	/^env = WindyGridworldEnv()$/;"	v
+env	TD/WindyGridWorldEnv.py	/^env = WindyGridworldEnv()$/;"	v
+env_	PolicyGradient/a3c/train.py	/^env_ = make_env()$/;"	v
+epsilon_decay_steps	DQN/dqn.py	/^                                    epsilon_decay_steps=500000,$/;"	v
+epsilon_end	DQN/dqn.py	/^                                    epsilon_end=0.1,$/;"	v
+epsilon_start	DQN/dqn.py	/^                                    epsilon_start=1.0,$/;"	v
+estimator	FA/QLearningwithValueFuncApprox.py	/^estimator = Estimator()$/;"	v
+eval_once	PolicyGradient/a3c/policy_monitor.py	/^  def eval_once(self, sess):$/;"	m	class:PolicyMonitor
+expected_v	DP/PolicyEvaluation.py	/^expected_v = np.array([  0, -14, -20, -22,$/;"	v
+expected_v	DP/PolicyIteration.py	/^expected_v = np.array([ 0, -1, -2, -3, -1, -2, -3, -2, -2, -3, -2, -1, -3, -2, -1,  0])$/;"	v
+expected_v	DP/ValueIteration.py	/^expected_v = np.array([ 0, -1, -2, -3, -1, -2, -3, -2, -2, -3, -2, -1, -3, -2, -1,  0])$/;"	v
+experiment_dir	DQN/dqn.py	/^                                    experiment_dir=experiment_dir,$/;"	v
+experiment_dir	DQN/dqn.py	/^experiment_dir = os.path.abspath(".\/experiments\/{}".format(env.spec.id))$/;"	v
+featurize_state	FA/QLearningwithValueFuncApprox.py	/^    def featurize_state(self, state):$/;"	m	class:Estimator
+featurizer	FA/QLearningwithValueFuncApprox.py	/^featurizer = sklearn.pipeline.FeatureUnion([$/;"	v
+getsourcefile	PolicyGradient/a3c/estimator_test.py	/^from inspect import getsourcefile$/;"	i
+getsourcefile	PolicyGradient/a3c/policy_monitor.py	/^from inspect import getsourcefile$/;"	i
+getsourcefile	PolicyGradient/a3c/policy_monitor_test.py	/^from inspect import getsourcefile$/;"	i
+getsourcefile	PolicyGradient/a3c/train.py	/^from inspect import getsourcefile$/;"	i
+getsourcefile	PolicyGradient/a3c/worker.py	/^from inspect import getsourcefile$/;"	i
+getsourcefile	PolicyGradient/a3c/worker_test.py	/^from inspect import getsourcefile$/;"	i
+global_counter	PolicyGradient/a3c/train.py	/^      global_counter=global_counter,$/;"	v
+global_counter	PolicyGradient/a3c/train.py	/^  global_counter = itertools.count()$/;"	v
+global_step	DQN/dqn.py	/^global_step = tf.Variable(0, name='global_step', trainable=False)$/;"	v
+global_step	PolicyGradient/ReinforceBaseline.py	/^global_step = tf.Variable(0, name="global_step", trainable=False)$/;"	v
+global_step	PolicyGradient/a3c/train.py	/^  global_step = tf.Variable(0, name="global_step", trainable=False)$/;"	v
+gym	DQN/BreakoutEnv.py	/^import gym$/;"	i
+gym	DQN/dqn.py	/^import gym$/;"	i
+gym	FA/MountainCarEnv.py	/^import gym$/;"	i
+gym	FA/QLearningwithValueFuncApprox.py	/^import gym$/;"	i
+gym	MC/MonteCarloEpsilonGreedy.py	/^import gym$/;"	i
+gym	MC/MonteCarloOffPolicy.py	/^import gym$/;"	i
+gym	MC/MonteCarloPrediction.py	/^import gym$/;"	i
+gym	PolicyGradient/ReinforceBaseline.py	/^import gym$/;"	i
+gym	PolicyGradient/a3c/estimator_test.py	/^import gym$/;"	i
+gym	PolicyGradient/a3c/policy_monitor.py	/^import gym$/;"	i
+gym	PolicyGradient/a3c/policy_monitor_test.py	/^import gym$/;"	i
+gym	PolicyGradient/a3c/train.py	/^import gym$/;"	i
+gym	PolicyGradient/a3c/worker.py	/^import gym$/;"	i
+gym	PolicyGradient/a3c/worker_test.py	/^import gym$/;"	i
+gym	TD/QLearning.py	/^import gym$/;"	i
+gym	TD/Sarsa.py	/^import gym$/;"	i
+gym	TD/WindyGridWorldEnv.py	/^import gym$/;"	i
+gym	lib/envs/blackjack.py	/^import gym$/;"	i
+gym	lib/envs/windy_gridworld.py	/^import gym$/;"	i
+import_path	PolicyGradient/a3c/estimator_test.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
+import_path	PolicyGradient/a3c/policy_monitor.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
+import_path	PolicyGradient/a3c/policy_monitor_test.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
+import_path	PolicyGradient/a3c/train.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
+import_path	PolicyGradient/a3c/worker.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
+import_path	PolicyGradient/a3c/worker_test.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
+ipdb	DQN/BreakoutEnv.py	/^import ipdb$/;"	i
+is_bust	lib/envs/blackjack.py	/^def is_bust(hand):  # Is this hand a bust?$/;"	f
+is_natural	lib/envs/blackjack.py	/^def is_natural(hand):  # Is this hand a natural blackjack?$/;"	f
+itertools	DQN/dqn.py	/^import itertools$/;"	i
+itertools	FA/QLearningwithValueFuncApprox.py	/^import itertools$/;"	i
+itertools	PolicyGradient/ReinforceBaseline.py	/^import itertools$/;"	i
+itertools	PolicyGradient/a3c/policy_monitor.py	/^import itertools$/;"	i
+itertools	PolicyGradient/a3c/policy_monitor_test.py	/^import itertools$/;"	i
+itertools	PolicyGradient/a3c/train.py	/^import itertools$/;"	i
+itertools	PolicyGradient/a3c/worker.py	/^import itertools$/;"	i
+itertools	PolicyGradient/a3c/worker_test.py	/^import itertools$/;"	i
+itertools	TD/QLearning.py	/^import itertools$/;"	i
+itertools	TD/Sarsa.py	/^import itertools$/;"	i
+latest_checkpoint	PolicyGradient/a3c/train.py	/^  latest_checkpoint = tf.train.latest_checkpoint(CHECKPOINT_DIR)$/;"	v
+make_copy_params_op	PolicyGradient/a3c/policy_monitor.py	/^from worker import make_copy_params_op$/;"	i
+make_copy_params_op	PolicyGradient/a3c/worker.py	/^def make_copy_params_op(v1_list, v2_list):$/;"	f
+make_env	PolicyGradient/a3c/estimator_test.py	/^def make_env():$/;"	f
+make_env	PolicyGradient/a3c/policy_monitor_test.py	/^def make_env():$/;"	f
+make_env	PolicyGradient/a3c/train.py	/^def make_env(wrap=True):$/;"	f
+make_env	PolicyGradient/a3c/worker_test.py	/^def make_env():$/;"	f
+make_epsilon_greedy_policy	DQN/dqn.py	/^def make_epsilon_greedy_policy(estimator, nA):$/;"	f
+make_epsilon_greedy_policy	FA/QLearningwithValueFuncApprox.py	/^def make_epsilon_greedy_policy(estimator, epsilon, nA):$/;"	f
+make_epsilon_greedy_policy	MC/MonteCarloEpsilonGreedy.py	/^def make_epsilon_greedy_policy(Q, epsilon, nA):$/;"	f
+make_epsilon_greedy_policy	TD/QLearning.py	/^def make_epsilon_greedy_policy(Q, epsilon, nA):$/;"	f
+make_epsilon_greedy_policy	TD/Sarsa.py	/^def make_epsilon_greedy_policy(Q, epsilon, nA):$/;"	f
+make_train_op	PolicyGradient/a3c/worker.py	/^def make_train_op(local_estimator, global_estimator):$/;"	f
+matplotlib	FA/QLearningwithValueFuncApprox.py	/^import matplotlib$/;"	i
+matplotlib	MC/MonteCarloEpsilonGreedy.py	/^import matplotlib$/;"	i
+matplotlib	MC/MonteCarloOffPolicy.py	/^import matplotlib$/;"	i
+matplotlib	MC/MonteCarloPrediction.py	/^import matplotlib$/;"	i
+matplotlib	PolicyGradient/ReinforceBaseline.py	/^import matplotlib$/;"	i
+matplotlib	TD/QLearning.py	/^import matplotlib$/;"	i
+matplotlib	TD/Sarsa.py	/^import matplotlib$/;"	i
+matplotlib	lib/plotting.py	/^import matplotlib$/;"	i
+max_global_steps	PolicyGradient/a3c/train.py	/^      max_global_steps=FLAGS.max_global_steps)$/;"	v
+mc_control_epsilon_greedy	MC/MonteCarloEpsilonGreedy.py	/^def mc_control_epsilon_greedy(env, num_episodes, discount_factor=1.0,$/;"	f
+mc_control_importance_sampling	MC/MonteCarloOffPolicy.py	/^def mc_control_importance_sampling(env, num_episodes, behavior_policy,$/;"	f
+mc_prediction	MC/MonteCarloPrediction.py	/^def mc_prediction(policy, env, num_episodes, discount_factor=1.0):$/;"	f
+metadata	lib/envs/cliff_walking.py	/^    metadata = {'render.modes': ['human', 'ansi']}$/;"	v	class:CliffWalkingEnv
+metadata	lib/envs/gridworld.py	/^    metadata = {'render.modes': ['human', 'ansi']}$/;"	v	class:GridworldEnv
+metadata	lib/envs/windy_gridworld.py	/^    metadata = {'render.modes': ['human', 'ansi']}$/;"	v	class:WindyGridworldEnv
+monitor_thread	PolicyGradient/a3c/train.py	/^  monitor_thread = threading.Thread(target=lambda: pe.continuous_eval(FLAGS.eval_every, sess, coord))$/;"	v
+multiprocessing	PolicyGradient/a3c/train.py	/^import multiprocessing$/;"	i
+name	PolicyGradient/a3c/train.py	/^      name="worker_{}".format(worker_id),$/;"	v
+namedtuple	DQN/dqn.py	/^from collections import deque, namedtuple$/;"	i
+namedtuple	lib/plotting.py	/^from collections import namedtuple$/;"	i
+np	DP/PolicyEvaluation.py	/^import numpy as np$/;"	i
+np	DP/PolicyIteration.py	/^import numpy as np$/;"	i
+np	DP/ValueIteration.py	/^import numpy as np$/;"	i
+np	DQN/BreakoutEnv.py	/^import numpy as np$/;"	i
+np	DQN/dqn.py	/^import numpy as np$/;"	i
+np	FA/MountainCarEnv.py	/^import numpy as np$/;"	i
+np	FA/QLearningwithValueFuncApprox.py	/^import numpy as np$/;"	i
+np	MC/MonteCarloEpsilonGreedy.py	/^import numpy as np$/;"	i
+np	MC/MonteCarloOffPolicy.py	/^import numpy as np$/;"	i
+np	MC/MonteCarloPrediction.py	/^import numpy as np$/;"	i
+np	PolicyGradient/ReinforceBaseline.py	/^import numpy as np$/;"	i
+np	PolicyGradient/a3c/estimator_test.py	/^import numpy as np$/;"	i
+np	PolicyGradient/a3c/estimators.py	/^import numpy as np$/;"	i
+np	PolicyGradient/a3c/policy_monitor.py	/^import numpy as np$/;"	i
+np	PolicyGradient/a3c/policy_monitor_test.py	/^import numpy as np$/;"	i
+np	PolicyGradient/a3c/train.py	/^import numpy as np$/;"	i
+np	PolicyGradient/a3c/worker.py	/^import numpy as np$/;"	i
+np	PolicyGradient/a3c/worker_test.py	/^import numpy as np$/;"	i
+np	TD/QLearning.py	/^import numpy as np$/;"	i
+np	TD/Sarsa.py	/^import numpy as np$/;"	i
+np	TD/WindyGridWorldEnv.py	/^import numpy as np$/;"	i
+np	lib/atari/helpers.py	/^import numpy as np$/;"	i
+np	lib/atari/state_processor.py	/^import numpy as np$/;"	i
+np	lib/envs/cliff_walking.py	/^import numpy as np$/;"	i
+np	lib/envs/gridworld.py	/^import numpy as np$/;"	i
+np	lib/envs/windy_gridworld.py	/^import numpy as np$/;"	i
+np	lib/plotting.py	/^import numpy as np$/;"	i
+num_episodes	DQN/dqn.py	/^                                    num_episodes=10000,$/;"	v
+observation	DQN/BreakoutEnv.py	/^observation = env.reset()$/;"	v
+observation_examples	FA/QLearningwithValueFuncApprox.py	/^observation_examples = np.array([env.observation_space.sample() for x in range(10000)])$/;"	v
+os	DQN/dqn.py	/^import os$/;"	i
+os	PolicyGradient/a3c/estimator_test.py	/^import os$/;"	i
+os	PolicyGradient/a3c/policy_monitor.py	/^import os$/;"	i
+os	PolicyGradient/a3c/policy_monitor_test.py	/^import os$/;"	i
+os	PolicyGradient/a3c/train.py	/^import os$/;"	i
+os	PolicyGradient/a3c/worker.py	/^import os$/;"	i
+os	PolicyGradient/a3c/worker_test.py	/^import os$/;"	i
+pd	TD/QLearning.py	/^import pandas as pd$/;"	i
+pd	TD/Sarsa.py	/^import pandas as pd$/;"	i
+pd	lib/plotting.py	/^import pandas as pd$/;"	i
+pe	PolicyGradient/a3c/train.py	/^  pe = PolicyMonitor($/;"	v
+pipeline	FA/QLearningwithValueFuncApprox.py	/^import sklearn.pipeline$/;"	i
+plot_cost_to_go_mountain_car	lib/plotting.py	/^def plot_cost_to_go_mountain_car(env, estimator, num_tiles=20):$/;"	f
+plot_episode_stats	lib/plotting.py	/^def plot_episode_stats(stats, smoothing_window=10, noshow=False):$/;"	f
+plot_surface	lib/plotting.py	/^    def plot_surface(X, Y, Z, title):$/;"	f	function:plot_value_function
+plot_value_function	lib/plotting.py	/^def plot_value_function(V, title="Value Function"):$/;"	f
+plotting	DQN/dqn.py	/^from lib import plotting$/;"	i
+plotting	FA/QLearningwithValueFuncApprox.py	/^from lib import plotting$/;"	i
+plotting	MC/MonteCarloEpsilonGreedy.py	/^from lib import plotting$/;"	i
+plotting	MC/MonteCarloOffPolicy.py	/^from lib import plotting$/;"	i
+plotting	MC/MonteCarloPrediction.py	/^from lib import plotting$/;"	i
+plotting	PolicyGradient/ReinforceBaseline.py	/^from lib import plotting$/;"	i
+plotting	TD/QLearning.py	/^from lib import plotting$/;"	i
+plotting	TD/Sarsa.py	/^from lib import plotting$/;"	i
+plt	DQN/BreakoutEnv.py	/^from matplotlib import pyplot as plt$/;"	i
+plt	FA/MountainCarEnv.py	/^from matplotlib import pyplot as plt$/;"	i
+plt	lib/plotting.py	/^from matplotlib import pyplot as plt$/;"	i
+policy_estimator	PolicyGradient/ReinforceBaseline.py	/^policy_estimator = PolicyEstimator()$/;"	v
+policy_eval	DP/PolicyEvaluation.py	/^def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):$/;"	f
+policy_eval	DP/PolicyIteration.py	/^def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):$/;"	f
+policy_fn	DQN/dqn.py	/^    def policy_fn(sess, observation, epsilon):$/;"	f	function:make_epsilon_greedy_policy
+policy_fn	FA/QLearningwithValueFuncApprox.py	/^    def policy_fn(observation):$/;"	f	function:make_epsilon_greedy_policy
+policy_fn	MC/MonteCarloEpsilonGreedy.py	/^    def policy_fn(observation):$/;"	f	function:make_epsilon_greedy_policy
+policy_fn	MC/MonteCarloOffPolicy.py	/^    def policy_fn(observation):$/;"	f	function:create_greedy_policy
+policy_fn	MC/MonteCarloOffPolicy.py	/^    def policy_fn(observation):$/;"	f	function:create_random_policy
+policy_fn	TD/QLearning.py	/^    def policy_fn(observation):$/;"	f	function:make_epsilon_greedy_policy
+policy_fn	TD/Sarsa.py	/^    def policy_fn(observation):$/;"	f	function:make_epsilon_greedy_policy
+policy_improvement	DP/PolicyIteration.py	/^def policy_improvement(env, policy_eval_fn=policy_eval, discount_factor=1.0):$/;"	f
+policy_net	PolicyGradient/a3c/train.py	/^      policy_net=policy_net,$/;"	v
+policy_net	PolicyGradient/a3c/train.py	/^    policy_net = PolicyEstimator(num_outputs=len(VALID_ACTIONS))$/;"	v
+policy_net	PolicyGradient/a3c/train.py	/^    policy_net=policy_net,$/;"	v
+pp	DP/PolicyIteration.py	/^pp = pprint.PrettyPrinter(indent=2)$/;"	v
+pp	DP/ValueIteration.py	/^pp = pprint.PrettyPrinter(indent=2)$/;"	v
+pprint	DP/PolicyIteration.py	/^import pprint$/;"	i
+pprint	DP/ValueIteration.py	/^import pprint$/;"	i
+predict	DQN/dqn.py	/^    def predict(self, sess, s):$/;"	m	class:Estimator
+predict	FA/QLearningwithValueFuncApprox.py	/^    def predict(self, s, a=None):$/;"	m	class:Estimator
+predict	PolicyGradient/ReinforceBaseline.py	/^    def predict(self, state, sess=None):$/;"	m	class:PolicyEstimator
+predict	PolicyGradient/ReinforceBaseline.py	/^    def predict(self, state, sess=None):$/;"	m	class:ValueEstimator
+preprocessing	FA/QLearningwithValueFuncApprox.py	/^import sklearn.preprocessing$/;"	i
+process	DQN/dqn.py	/^    def process(self, sess, state):$/;"	m	class:StateProcessor
+process	lib/atari/state_processor.py	/^    def process(self, state, sess=None):$/;"	m	class:StateProcessor
+q_estimator	DQN/dqn.py	/^                                    q_estimator=q_estimator,$/;"	v
+q_estimator	DQN/dqn.py	/^q_estimator = Estimator(scope="q", summaries_dir=experiment_dir)$/;"	v
+q_learning	FA/QLearningwithValueFuncApprox.py	/^def q_learning(env, estimator, num_episodes, discount_factor=1.0, epsilon=0.1, epsilon_decay=1.0):$/;"	f
+q_learning	TD/QLearning.py	/^def q_learning(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):$/;"	f
+random	DQN/dqn.py	/^import random$/;"	i
+random_policy	DP/PolicyEvaluation.py	/^random_policy = np.ones([env.nS, env.nA]) \/ env.nA$/;"	v
+random_policy	MC/MonteCarloOffPolicy.py	/^random_policy = create_random_policy(env.action_space.n)$/;"	v
+reinforce	PolicyGradient/ReinforceBaseline.py	/^def reinforce(env, estimator_policy, estimator_value, num_episodes, discount_factor=1.0):$/;"	f
+replay_memory_init_size	DQN/dqn.py	/^                                    replay_memory_init_size=50000,$/;"	v
+replay_memory_size	DQN/dqn.py	/^                                    replay_memory_size=500000,$/;"	v
+run	PolicyGradient/a3c/worker.py	/^  def run(self, sess, coord, t_max):$/;"	m	class:Worker
+run_n_steps	PolicyGradient/a3c/worker.py	/^  def run_n_steps(self, n, sess):$/;"	m	class:Worker
+sample_policy	MC/MonteCarloPrediction.py	/^def sample_policy(observation):$/;"	f
+sarsa	TD/Sarsa.py	/^def sarsa(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):$/;"	f
+saver	PolicyGradient/a3c/train.py	/^    saver=saver)$/;"	v
+saver	PolicyGradient/a3c/train.py	/^  saver = tf.train.Saver(keep_checkpoint_every_n_hours=2.0, max_to_keep=10)$/;"	v
+scaler	FA/QLearningwithValueFuncApprox.py	/^scaler = sklearn.preprocessing.StandardScaler()$/;"	v
+score	lib/envs/blackjack.py	/^def score(hand):  # What is the score of this hand (0 if bust)$/;"	f
+seeding	lib/envs/blackjack.py	/^from gym.utils import seeding$/;"	i
+setUp	PolicyGradient/a3c/policy_monitor_test.py	/^  def setUp(self):$/;"	m	class:PolicyMonitorTest
+setUp	PolicyGradient/a3c/worker_test.py	/^  def setUp(self):$/;"	m	class:WorkerTest
+shutil	PolicyGradient/a3c/train.py	/^import shutil$/;"	i
+sklearn	FA/QLearningwithValueFuncApprox.py	/^import sklearn.pipeline$/;"	i
+sklearn	FA/QLearningwithValueFuncApprox.py	/^import sklearn.preprocessing$/;"	i
+spaces	lib/envs/blackjack.py	/^from gym import spaces$/;"	i
+state_processor	DQN/dqn.py	/^                                    state_processor=state_processor,$/;"	v
+state_processor	DQN/dqn.py	/^state_processor = StateProcessor()$/;"	v
+stats	FA/QLearningwithValueFuncApprox.py	/^stats = q_learning(env, estimator, 100, epsilon=0.0)$/;"	v
+stats	PolicyGradient/ReinforceBaseline.py	/^    stats = reinforce(env, policy_estimator, value_estimator, 2000, discount_factor=1.0)$/;"	v
+step	lib/atari/helpers.py	/^  def step(self, *args, **kwargs):$/;"	m	class:AtariEnvWrapper
+sum_hand	lib/envs/blackjack.py	/^def sum_hand(hand):  # Return current hand total$/;"	f
+summary_writer	PolicyGradient/a3c/train.py	/^      summary_writer=worker_summary_writer,$/;"	v
+summary_writer	PolicyGradient/a3c/train.py	/^    summary_writer=summary_writer,$/;"	v
+summary_writer	PolicyGradient/a3c/train.py	/^summary_writer = tf.summary.FileWriter(os.path.join(MODEL_DIR, "train"))$/;"	v
+sys	DP/PolicyEvaluation.py	/^import sys$/;"	i
+sys	DP/PolicyIteration.py	/^import sys$/;"	i
+sys	DP/ValueIteration.py	/^import sys$/;"	i
+sys	DQN/dqn.py	/^import sys$/;"	i
+sys	FA/QLearningwithValueFuncApprox.py	/^import sys$/;"	i
+sys	MC/MonteCarloEpsilonGreedy.py	/^import sys$/;"	i
+sys	MC/MonteCarloOffPolicy.py	/^import sys$/;"	i
+sys	MC/MonteCarloPrediction.py	/^import sys$/;"	i
+sys	PolicyGradient/ReinforceBaseline.py	/^import sys$/;"	i
+sys	PolicyGradient/a3c/estimator_test.py	/^import sys$/;"	i
+sys	PolicyGradient/a3c/policy_monitor.py	/^import sys$/;"	i
+sys	PolicyGradient/a3c/policy_monitor_test.py	/^import sys$/;"	i
+sys	PolicyGradient/a3c/train.py	/^import sys$/;"	i
+sys	PolicyGradient/a3c/worker.py	/^import sys$/;"	i
+sys	PolicyGradient/a3c/worker_test.py	/^import sys$/;"	i
+sys	TD/QLearning.py	/^import sys$/;"	i
+sys	TD/Sarsa.py	/^import sys$/;"	i
+sys	TD/WindyGridWorldEnv.py	/^import sys$/;"	i
+sys	lib/envs/cliff_walking.py	/^import sys$/;"	i
+sys	lib/envs/gridworld.py	/^import sys$/;"	i
+sys	lib/envs/windy_gridworld.py	/^import sys$/;"	i
+t	PolicyGradient/a3c/train.py	/^    t = threading.Thread(target=worker_fn)$/;"	v
+target_estimator	DQN/dqn.py	/^                                    target_estimator=target_estimator,$/;"	v
+target_estimator	DQN/dqn.py	/^target_estimator = Estimator(scope="target_q")$/;"	v
+tempfile	PolicyGradient/a3c/policy_monitor_test.py	/^import tempfile$/;"	i
+testEvalOnce	PolicyGradient/a3c/policy_monitor_test.py	/^  def testEvalOnce(self):$/;"	m	class:PolicyMonitorTest
+testGradient	PolicyGradient/a3c/estimator_test.py	/^  def testGradient(self):$/;"	m	class:PolicyEstimatorTest
+testGradient	PolicyGradient/a3c/estimator_test.py	/^  def testGradient(self):$/;"	m	class:ValueEstimatorTest
+testPolicyNetPredict	PolicyGradient/a3c/worker_test.py	/^  def testPolicyNetPredict(self):$/;"	m	class:WorkerTest
+testPredict	PolicyGradient/a3c/estimator_test.py	/^  def testPredict(self):$/;"	m	class:PolicyEstimatorTest
+testPredict	PolicyGradient/a3c/estimator_test.py	/^  def testPredict(self):$/;"	m	class:ValueEstimatorTest
+testRunNStepsAndUpdate	PolicyGradient/a3c/worker_test.py	/^  def testRunNStepsAndUpdate(self):$/;"	m	class:WorkerTest
+testValueNetPredict	PolicyGradient/a3c/worker_test.py	/^  def testValueNetPredict(self):$/;"	m	class:WorkerTest
+tf	DQN/dqn.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/ReinforceBaseline.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/a3c/estimator_test.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/a3c/estimators.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/a3c/policy_monitor.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/a3c/policy_monitor_test.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/a3c/train.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/a3c/worker.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/a3c/worker_test.py	/^import tensorflow as tf$/;"	i
+tf	lib/atari/state_processor.py	/^import tensorflow as tf$/;"	i
+threading	PolicyGradient/a3c/train.py	/^import threading$/;"	i
+time	PolicyGradient/a3c/policy_monitor.py	/^import time$/;"	i
+unittest	PolicyGradient/a3c/estimator_test.py	/^import unittest$/;"	i
+unittest	PolicyGradient/a3c/policy_monitor_test.py	/^import unittest$/;"	i
+unittest	PolicyGradient/a3c/train.py	/^import unittest$/;"	i
+unittest	PolicyGradient/a3c/worker_test.py	/^import unittest$/;"	i
+update	DQN/dqn.py	/^    def update(self, sess, s, a, y):$/;"	m	class:Estimator
+update	FA/QLearningwithValueFuncApprox.py	/^    def update(self, s, a, y):$/;"	m	class:Estimator
+update	PolicyGradient/ReinforceBaseline.py	/^    def update(self, state, target, action, sess=None):$/;"	m	class:PolicyEstimator
+update	PolicyGradient/ReinforceBaseline.py	/^    def update(self, state, target, sess=None):$/;"	m	class:ValueEstimator
+update	PolicyGradient/a3c/worker.py	/^  def update(self, transitions, sess):$/;"	m	class:Worker
+update_target_estimator_every	DQN/dqn.py	/^                                    update_target_estimator_every=10000,$/;"	v
+usable_ace	lib/envs/blackjack.py	/^def usable_ace(hand):  # Does this hand have a usable ace?$/;"	f
+v	DP/PolicyEvaluation.py	/^v = policy_eval(random_policy, env)$/;"	v
+value_estimator	PolicyGradient/ReinforceBaseline.py	/^value_estimator = ValueEstimator()$/;"	v
+value_iteration	DP/ValueIteration.py	/^def value_iteration(env, theta=0.0001, discount_factor=1.0):$/;"	f
+value_net	PolicyGradient/a3c/train.py	/^      value_net=value_net,$/;"	v
+value_net	PolicyGradient/a3c/train.py	/^    value_net = ValueEstimator(reuse=True)$/;"	v
+worker	PolicyGradient/a3c/train.py	/^    worker = Worker($/;"	v
+worker_fn	PolicyGradient/a3c/train.py	/^    worker_fn = lambda: worker.run(sess, coord, FLAGS.t_max)$/;"	v
+worker_summary_writer	PolicyGradient/a3c/train.py	/^      worker_summary_writer = summary_writer$/;"	v
+worker_summary_writer	PolicyGradient/a3c/train.py	/^    worker_summary_writer = None$/;"	v
+worker_threads	PolicyGradient/a3c/train.py	/^  worker_threads = []$/;"	v
+workers	PolicyGradient/a3c/train.py	/^  workers = []$/;"	v
+wrappers	FA/QLearningwithValueFuncApprox.py	/^from gym import wrappers$/;"	i
+wrappers	TD/Sarsa.py	/^from gym import wrappers$/;"	i
