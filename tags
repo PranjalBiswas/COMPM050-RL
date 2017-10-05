@@ -11,6 +11,7 @@ BlackjackEnv	MC/MonteCarloOffPolicy.py	/^from lib.envs.blackjack import Blackjac
 BlackjackEnv	MC/MonteCarloPrediction.py	/^from lib.envs.blackjack import BlackjackEnv$/;"	i
 BlackjackEnv	lib/envs/blackjack.py	/^class BlackjackEnv(gym.Env):$/;"	c
 CHECKPOINT_DIR	PolicyGradient/a3c/train.py	/^CHECKPOINT_DIR = os.path.join(MODEL_DIR, "checkpoints")$/;"	v
+CliffWalkingEnv	PolicyGradient/AC.py	/^from lib.envs.cliff_walking import CliffWalkingEnv$/;"	i
 CliffWalkingEnv	PolicyGradient/ReinforceBaseline.py	/^from lib.envs.cliff_walking import CliffWalkingEnv$/;"	i
 CliffWalkingEnv	TD/QLearning.py	/^from lib.envs.cliff_walking import CliffWalkingEnv$/;"	i
 CliffWalkingEnv	lib/envs/cliff_walking.py	/^class CliffWalkingEnv(discrete.DiscreteEnv):$/;"	c
@@ -32,6 +33,9 @@ MODEL_DIR	PolicyGradient/a3c/train.py	/^MODEL_DIR = FLAGS.model_dir$/;"	v
 Monitor	PolicyGradient/a3c/policy_monitor.py	/^from gym.wrappers import Monitor$/;"	i
 NUM_WORKERS	PolicyGradient/a3c/train.py	/^  NUM_WORKERS = FLAGS.parallelism$/;"	v
 NUM_WORKERS	PolicyGradient/a3c/train.py	/^NUM_WORKERS = multiprocessing.cpu_count()$/;"	v
+PolicyEstimator	Cartpole/cartpole.py	/^class PolicyEstimator():$/;"	c
+PolicyEstimator	Cartpole/cartpole1.py	/^class PolicyEstimator():$/;"	c
+PolicyEstimator	PolicyGradient/AC.py	/^class PolicyEstimator():$/;"	c
 PolicyEstimator	PolicyGradient/ReinforceBaseline.py	/^class PolicyEstimator():$/;"	c
 PolicyEstimator	PolicyGradient/a3c/estimator_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
 PolicyEstimator	PolicyGradient/a3c/estimators.py	/^class PolicyEstimator():$/;"	c
@@ -71,6 +75,9 @@ VALID_ACTIONS	PolicyGradient/a3c/train.py	/^  VALID_ACTIONS = list(range(env_.ac
 VALID_ACTIONS	PolicyGradient/a3c/worker_test.py	/^VALID_ACTIONS = [0, 1, 2, 3]$/;"	v
 V_10k	MC/MonteCarloPrediction.py	/^V_10k = mc_prediction(sample_policy, env, num_episodes=10000)$/;"	v
 V_500k	MC/MonteCarloPrediction.py	/^V_500k = mc_prediction(sample_policy, env, num_episodes=500000)$/;"	v
+ValueEstimator	Cartpole/cartpole.py	/^class ValueEstimator():$/;"	c
+ValueEstimator	Cartpole/cartpole1.py	/^class ValueEstimator():$/;"	c
+ValueEstimator	PolicyGradient/AC.py	/^class ValueEstimator():$/;"	c
 ValueEstimator	PolicyGradient/ReinforceBaseline.py	/^class ValueEstimator():$/;"	c
 ValueEstimator	PolicyGradient/a3c/estimator_test.py	/^from estimators import ValueEstimator, PolicyEstimator$/;"	i
 ValueEstimator	PolicyGradient/a3c/estimators.py	/^class ValueEstimator():$/;"	c
@@ -88,9 +95,15 @@ Worker	PolicyGradient/a3c/worker.py	/^class Worker(object):$/;"	c
 Worker	PolicyGradient/a3c/worker_test.py	/^from worker import Worker$/;"	i
 WorkerTest	PolicyGradient/a3c/worker_test.py	/^class WorkerTest(tf.test.TestCase):$/;"	c
 __getattr__	lib/atari/helpers.py	/^  def __getattr__(self, name):$/;"	m	class:AtariEnvWrapper	file:
+__init__	Cartpole/cartpole.py	/^    def __init__(self, learning_rate=0.01, scope="policy_estimator"):$/;"	m	class:PolicyEstimator
+__init__	Cartpole/cartpole.py	/^    def __init__(self, learning_rate=0.1, scope="value_estimator"):$/;"	m	class:ValueEstimator
+__init__	Cartpole/cartpole1.py	/^    def __init__(self, learning_rate=0.1, scope="policy_estimator"):$/;"	m	class:PolicyEstimator
+__init__	Cartpole/cartpole1.py	/^    def __init__(self, learning_rate=0.1, scope="value_estimator"):$/;"	m	class:ValueEstimator
 __init__	DQN/dqn.py	/^    def __init__(self):$/;"	m	class:StateProcessor
 __init__	DQN/dqn.py	/^    def __init__(self, scope="estimator", summaries_dir=None):$/;"	m	class:Estimator
 __init__	FA/QLearningwithValueFuncApprox.py	/^    def __init__(self):$/;"	m	class:Estimator
+__init__	PolicyGradient/AC.py	/^    def __init__(self, learning_rate=0.01, scope="policy_estimator"):$/;"	m	class:PolicyEstimator
+__init__	PolicyGradient/AC.py	/^    def __init__(self, learning_rate=0.1, scope="value_estimator"):$/;"	m	class:ValueEstimator
 __init__	PolicyGradient/ReinforceBaseline.py	/^    def __init__(self, learning_rate=0.01, scope="policy_estimator"):$/;"	m	class:PolicyEstimator
 __init__	PolicyGradient/ReinforceBaseline.py	/^    def __init__(self, learning_rate=0.1, scope="value_estimator"):$/;"	m	class:ValueEstimator
 __init__	PolicyGradient/a3c/estimators.py	/^  def __init__(self, num_outputs, reuse=False, trainable=True):$/;"	m	class:PolicyEstimator
@@ -122,6 +135,12 @@ a	TD/QLearning.py	/^a=np.zeros(env.nS)$/;"	v
 a	TD/Sarsa.py	/^a=np.zeros(env.nS)$/;"	v
 action_value	MC/MonteCarloEpsilonGreedy.py	/^    action_value = np.max(actions)$/;"	v
 action_value	MC/MonteCarloOffPolicy.py	/^    action_value = np.max(action_values)$/;"	v
+actor_critic	Cartpole/cartpole.py	/^def actor_critic(env, estimator_policy, estimator_value, num_episodes,$/;"	f
+actor_critic	Cartpole/cartpole1.py	/^def actor_critic(env, estimator_policy, estimator_value,  num_episodes,$/;"	f
+actor_critic	PolicyGradient/AC.py	/^def actor_critic(env, estimator_policy, estimator_value, num_episodes, discount_factor=1.0):$/;"	f
+api_key	Cartpole/cartpole.py	/^api_key = 'sk_HZdo670QLuzq21Do3P0sg'$/;"	v
+api_key	Cartpole/cartpole1.py	/^api_key = 'sk_HZdo670QLuzq21Do3P0sg'$/;"	v
+api_key	Cartpole/cartpole_reproduce.py	/^api_key = 'sk_HZdo670QLuzq21Do3P0sg'$/;"	v
 atari_helpers	PolicyGradient/a3c/estimator_test.py	/^from lib.atari import helpers as atari_helpers$/;"	i
 atari_helpers	PolicyGradient/a3c/policy_monitor.py	/^from lib.atari import helpers as atari_helpers$/;"	i
 atari_helpers	PolicyGradient/a3c/policy_monitor_test.py	/^from lib.atari import helpers as atari_helpers$/;"	i
@@ -134,6 +153,9 @@ batch_size	DQN/dqn.py	/^                                    batch_size=32):$/;"	
 behavior_policy	MC/MonteCarloOffPolicy.py	/^                                           behavior_policy=random_policy)$/;"	v
 build_shared_network	PolicyGradient/a3c/estimators.py	/^def build_shared_network(X, add_summaries=False):$/;"	f
 cmp	lib/envs/blackjack.py	/^def cmp(a, b):$/;"	f
+collections	Cartpole/cartpole.py	/^import collections$/;"	i
+collections	Cartpole/cartpole1.py	/^import collections$/;"	i
+collections	PolicyGradient/AC.py	/^import collections$/;"	i
 collections	PolicyGradient/ReinforceBaseline.py	/^import collections$/;"	i
 collections	PolicyGradient/a3c/policy_monitor.py	/^import collections$/;"	i
 collections	PolicyGradient/a3c/policy_monitor_test.py	/^import collections$/;"	i
@@ -165,6 +187,12 @@ discrete	lib/envs/gridworld.py	/^from gym.envs.toy_text import discrete$/;"	i
 discrete	lib/envs/windy_gridworld.py	/^from gym.envs.toy_text import discrete$/;"	i
 draw_card	lib/envs/blackjack.py	/^def draw_card(np_random):$/;"	f
 draw_hand	lib/envs/blackjack.py	/^def draw_hand(np_random):$/;"	f
+env	Cartpole/cartpole.py	/^env = gym.make('CartPole-v0')$/;"	v
+env	Cartpole/cartpole.py	/^env = gym.wrappers.Monitor(env, 'results', force=True)$/;"	v
+env	Cartpole/cartpole1.py	/^env = gym.make('CartPole-v0')$/;"	v
+env	Cartpole/cartpole1.py	/^env = gym.wrappers.Monitor(env, 'results', force=True)$/;"	v
+env	Cartpole/cartpole_reproduce.py	/^env = gym.make('CartPole-v0')$/;"	v
+env	Cartpole/cartpole_reproduce.py	/^env = gym.wrappers.Monitor(env, 'cartpole', force=True)$/;"	v
 env	DP/PolicyEvaluation.py	/^env = GridworldEnv()$/;"	v
 env	DP/PolicyIteration.py	/^env = GridworldEnv()$/;"	v
 env	DP/ValueIteration.py	/^env = GridworldEnv()$/;"	v
@@ -175,6 +203,7 @@ env	FA/QLearningwithValueFuncApprox.py	/^env = gym.envs.make("MountainCar-v0")$/
 env	MC/MonteCarloEpsilonGreedy.py	/^env = BlackjackEnv()$/;"	v
 env	MC/MonteCarloOffPolicy.py	/^env = BlackjackEnv()$/;"	v
 env	MC/MonteCarloPrediction.py	/^env = BlackjackEnv()$/;"	v
+env	PolicyGradient/AC.py	/^env = CliffWalkingEnv()$/;"	v
 env	PolicyGradient/ReinforceBaseline.py	/^env = CliffWalkingEnv()$/;"	v
 env	PolicyGradient/a3c/train.py	/^      env=make_env(),$/;"	v
 env	PolicyGradient/a3c/train.py	/^    env=make_env(wrap=False),$/;"	v
@@ -202,9 +231,15 @@ getsourcefile	PolicyGradient/a3c/worker.py	/^from inspect import getsourcefile$/
 getsourcefile	PolicyGradient/a3c/worker_test.py	/^from inspect import getsourcefile$/;"	i
 global_counter	PolicyGradient/a3c/train.py	/^      global_counter=global_counter,$/;"	v
 global_counter	PolicyGradient/a3c/train.py	/^  global_counter = itertools.count()$/;"	v
+global_step	Cartpole/cartpole.py	/^global_step = tf.Variable(0, name="global_step", trainable=False)$/;"	v
+global_step	Cartpole/cartpole1.py	/^global_step = tf.Variable(0, name="global_step", trainable=False)$/;"	v
 global_step	DQN/dqn.py	/^global_step = tf.Variable(0, name='global_step', trainable=False)$/;"	v
+global_step	PolicyGradient/AC.py	/^global_step = tf.Variable(0, name="global_step", trainable=False)$/;"	v
 global_step	PolicyGradient/ReinforceBaseline.py	/^global_step = tf.Variable(0, name="global_step", trainable=False)$/;"	v
 global_step	PolicyGradient/a3c/train.py	/^  global_step = tf.Variable(0, name="global_step", trainable=False)$/;"	v
+gym	Cartpole/cartpole.py	/^import gym$/;"	i
+gym	Cartpole/cartpole1.py	/^import gym$/;"	i
+gym	Cartpole/cartpole_reproduce.py	/^import gym$/;"	i
 gym	DQN/BreakoutEnv.py	/^import gym$/;"	i
 gym	DQN/dqn.py	/^import gym$/;"	i
 gym	FA/MountainCarEnv.py	/^import gym$/;"	i
@@ -212,6 +247,7 @@ gym	FA/QLearningwithValueFuncApprox.py	/^import gym$/;"	i
 gym	MC/MonteCarloEpsilonGreedy.py	/^import gym$/;"	i
 gym	MC/MonteCarloOffPolicy.py	/^import gym$/;"	i
 gym	MC/MonteCarloPrediction.py	/^import gym$/;"	i
+gym	PolicyGradient/AC.py	/^import gym$/;"	i
 gym	PolicyGradient/ReinforceBaseline.py	/^import gym$/;"	i
 gym	PolicyGradient/a3c/estimator_test.py	/^import gym$/;"	i
 gym	PolicyGradient/a3c/policy_monitor.py	/^import gym$/;"	i
@@ -230,11 +266,18 @@ import_path	PolicyGradient/a3c/policy_monitor_test.py	/^import_path = os.path.ab
 import_path	PolicyGradient/a3c/train.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
 import_path	PolicyGradient/a3c/worker.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
 import_path	PolicyGradient/a3c/worker_test.py	/^import_path = os.path.abspath(os.path.join(current_path, "..\/.."))$/;"	v
+ipdb	Cartpole/cartpole1.py	/^import ipdb$/;"	i
+ipdb	Cartpole/cartpole_reproduce.py	/^import ipdb$/;"	i
 ipdb	DQN/BreakoutEnv.py	/^import ipdb$/;"	i
 is_bust	lib/envs/blackjack.py	/^def is_bust(hand):  # Is this hand a bust?$/;"	f
 is_natural	lib/envs/blackjack.py	/^def is_natural(hand):  # Is this hand a natural blackjack?$/;"	f
+is_submit	Cartpole/cartpole.py	/^is_submit = False$/;"	v
+is_submit	Cartpole/cartpole1.py	/^is_submit = False$/;"	v
+itertools	Cartpole/cartpole.py	/^import itertools$/;"	i
+itertools	Cartpole/cartpole1.py	/^import itertools$/;"	i
 itertools	DQN/dqn.py	/^import itertools$/;"	i
 itertools	FA/QLearningwithValueFuncApprox.py	/^import itertools$/;"	i
+itertools	PolicyGradient/AC.py	/^import itertools$/;"	i
 itertools	PolicyGradient/ReinforceBaseline.py	/^import itertools$/;"	i
 itertools	PolicyGradient/a3c/policy_monitor.py	/^import itertools$/;"	i
 itertools	PolicyGradient/a3c/policy_monitor_test.py	/^import itertools$/;"	i
@@ -256,10 +299,19 @@ make_epsilon_greedy_policy	MC/MonteCarloEpsilonGreedy.py	/^def make_epsilon_gree
 make_epsilon_greedy_policy	TD/QLearning.py	/^def make_epsilon_greedy_policy(Q, epsilon, nA):$/;"	f
 make_epsilon_greedy_policy	TD/Sarsa.py	/^def make_epsilon_greedy_policy(Q, epsilon, nA):$/;"	f
 make_train_op	PolicyGradient/a3c/worker.py	/^def make_train_op(local_estimator, global_estimator):$/;"	f
+math	Cartpole/cartpole.py	/^import math$/;"	i
+math	Cartpole/cartpole1.py	/^import math$/;"	i
+math	Cartpole/cartpole_reproduce.py	/^import math$/;"	i
+matplotlib	Cartpole/cartpole.py	/^import matplotlib$/;"	i
+matplotlib	Cartpole/cartpole.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	Cartpole/cartpole1.py	/^import matplotlib$/;"	i
+matplotlib	Cartpole/cartpole1.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	Cartpole/cartpole_reproduce.py	/^import matplotlib.pyplot as plt$/;"	i
 matplotlib	FA/QLearningwithValueFuncApprox.py	/^import matplotlib$/;"	i
 matplotlib	MC/MonteCarloEpsilonGreedy.py	/^import matplotlib$/;"	i
 matplotlib	MC/MonteCarloOffPolicy.py	/^import matplotlib$/;"	i
 matplotlib	MC/MonteCarloPrediction.py	/^import matplotlib$/;"	i
+matplotlib	PolicyGradient/AC.py	/^import matplotlib$/;"	i
 matplotlib	PolicyGradient/ReinforceBaseline.py	/^import matplotlib$/;"	i
 matplotlib	TD/QLearning.py	/^import matplotlib$/;"	i
 matplotlib	TD/Sarsa.py	/^import matplotlib$/;"	i
@@ -276,6 +328,9 @@ multiprocessing	PolicyGradient/a3c/train.py	/^import multiprocessing$/;"	i
 name	PolicyGradient/a3c/train.py	/^      name="worker_{}".format(worker_id),$/;"	v
 namedtuple	DQN/dqn.py	/^from collections import deque, namedtuple$/;"	i
 namedtuple	lib/plotting.py	/^from collections import namedtuple$/;"	i
+np	Cartpole/cartpole.py	/^import numpy as np$/;"	i
+np	Cartpole/cartpole1.py	/^import numpy as np$/;"	i
+np	Cartpole/cartpole_reproduce.py	/^import numpy as np$/;"	i
 np	DP/PolicyEvaluation.py	/^import numpy as np$/;"	i
 np	DP/PolicyIteration.py	/^import numpy as np$/;"	i
 np	DP/ValueIteration.py	/^import numpy as np$/;"	i
@@ -286,6 +341,7 @@ np	FA/QLearningwithValueFuncApprox.py	/^import numpy as np$/;"	i
 np	MC/MonteCarloEpsilonGreedy.py	/^import numpy as np$/;"	i
 np	MC/MonteCarloOffPolicy.py	/^import numpy as np$/;"	i
 np	MC/MonteCarloPrediction.py	/^import numpy as np$/;"	i
+np	PolicyGradient/AC.py	/^import numpy as np$/;"	i
 np	PolicyGradient/ReinforceBaseline.py	/^import numpy as np$/;"	i
 np	PolicyGradient/a3c/estimator_test.py	/^import numpy as np$/;"	i
 np	PolicyGradient/a3c/estimators.py	/^import numpy as np$/;"	i
@@ -322,17 +378,26 @@ plot_cost_to_go_mountain_car	lib/plotting.py	/^def plot_cost_to_go_mountain_car(
 plot_episode_stats	lib/plotting.py	/^def plot_episode_stats(stats, smoothing_window=10, noshow=False):$/;"	f
 plot_surface	lib/plotting.py	/^    def plot_surface(X, Y, Z, title):$/;"	f	function:plot_value_function
 plot_value_function	lib/plotting.py	/^def plot_value_function(V, title="Value Function"):$/;"	f
+plotting	Cartpole/cartpole.py	/^from lib import plotting$/;"	i
+plotting	Cartpole/cartpole1.py	/^from lib import plotting$/;"	i
 plotting	DQN/dqn.py	/^from lib import plotting$/;"	i
 plotting	FA/QLearningwithValueFuncApprox.py	/^from lib import plotting$/;"	i
 plotting	MC/MonteCarloEpsilonGreedy.py	/^from lib import plotting$/;"	i
 plotting	MC/MonteCarloOffPolicy.py	/^from lib import plotting$/;"	i
 plotting	MC/MonteCarloPrediction.py	/^from lib import plotting$/;"	i
+plotting	PolicyGradient/AC.py	/^from lib import plotting$/;"	i
 plotting	PolicyGradient/ReinforceBaseline.py	/^from lib import plotting$/;"	i
 plotting	TD/QLearning.py	/^from lib import plotting$/;"	i
 plotting	TD/Sarsa.py	/^from lib import plotting$/;"	i
+plt	Cartpole/cartpole.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	Cartpole/cartpole1.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	Cartpole/cartpole_reproduce.py	/^import matplotlib.pyplot as plt$/;"	i
 plt	DQN/BreakoutEnv.py	/^from matplotlib import pyplot as plt$/;"	i
 plt	FA/MountainCarEnv.py	/^from matplotlib import pyplot as plt$/;"	i
 plt	lib/plotting.py	/^from matplotlib import pyplot as plt$/;"	i
+policy_estimator	Cartpole/cartpole.py	/^policy_estimator = PolicyEstimator()$/;"	v
+policy_estimator	Cartpole/cartpole1.py	/^policy_estimator = PolicyEstimator()$/;"	v
+policy_estimator	PolicyGradient/AC.py	/^policy_estimator = PolicyEstimator()$/;"	v
 policy_estimator	PolicyGradient/ReinforceBaseline.py	/^policy_estimator = PolicyEstimator()$/;"	v
 policy_eval	DP/PolicyEvaluation.py	/^def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):$/;"	f
 policy_eval	DP/PolicyIteration.py	/^def policy_eval(policy, env, discount_factor=1.0, theta=0.00001):$/;"	f
@@ -343,6 +408,8 @@ policy_fn	MC/MonteCarloOffPolicy.py	/^    def policy_fn(observation):$/;"	f	func
 policy_fn	MC/MonteCarloOffPolicy.py	/^    def policy_fn(observation):$/;"	f	function:create_random_policy
 policy_fn	TD/QLearning.py	/^    def policy_fn(observation):$/;"	f	function:make_epsilon_greedy_policy
 policy_fn	TD/Sarsa.py	/^    def policy_fn(observation):$/;"	f	function:make_epsilon_greedy_policy
+policy_grad	Cartpole/cartpole_reproduce.py	/^policy_grad = policy_gradient()$/;"	v
+policy_gradient	Cartpole/cartpole_reproduce.py	/^def policy_gradient():$/;"	f
 policy_improvement	DP/PolicyIteration.py	/^def policy_improvement(env, policy_eval_fn=policy_eval, discount_factor=1.0):$/;"	f
 policy_net	PolicyGradient/a3c/train.py	/^      policy_net=policy_net,$/;"	v
 policy_net	PolicyGradient/a3c/train.py	/^    policy_net = PolicyEstimator(num_outputs=len(VALID_ACTIONS))$/;"	v
@@ -351,8 +418,14 @@ pp	DP/PolicyIteration.py	/^pp = pprint.PrettyPrinter(indent=2)$/;"	v
 pp	DP/ValueIteration.py	/^pp = pprint.PrettyPrinter(indent=2)$/;"	v
 pprint	DP/PolicyIteration.py	/^import pprint$/;"	i
 pprint	DP/ValueIteration.py	/^import pprint$/;"	i
+predict	Cartpole/cartpole.py	/^    def predict(self, state, sess=None):$/;"	m	class:PolicyEstimator
+predict	Cartpole/cartpole.py	/^    def predict(self, state, sess=None):$/;"	m	class:ValueEstimator
+predict	Cartpole/cartpole1.py	/^    def predict(self, state, sess=None):$/;"	m	class:PolicyEstimator
+predict	Cartpole/cartpole1.py	/^    def predict(self, state, sess=None):$/;"	m	class:ValueEstimator
 predict	DQN/dqn.py	/^    def predict(self, sess, s):$/;"	m	class:Estimator
 predict	FA/QLearningwithValueFuncApprox.py	/^    def predict(self, s, a=None):$/;"	m	class:Estimator
+predict	PolicyGradient/AC.py	/^    def predict(self, state, sess=None):$/;"	m	class:PolicyEstimator
+predict	PolicyGradient/AC.py	/^    def predict(self, state, sess=None):$/;"	m	class:ValueEstimator
 predict	PolicyGradient/ReinforceBaseline.py	/^    def predict(self, state, sess=None):$/;"	m	class:PolicyEstimator
 predict	PolicyGradient/ReinforceBaseline.py	/^    def predict(self, state, sess=None):$/;"	m	class:ValueEstimator
 preprocessing	FA/QLearningwithValueFuncApprox.py	/^import sklearn.preprocessing$/;"	i
@@ -362,13 +435,20 @@ q_estimator	DQN/dqn.py	/^                                    q_estimator=q_estim
 q_estimator	DQN/dqn.py	/^q_estimator = Estimator(scope="q", summaries_dir=experiment_dir)$/;"	v
 q_learning	FA/QLearningwithValueFuncApprox.py	/^def q_learning(env, estimator, num_episodes, discount_factor=1.0, epsilon=0.1, epsilon_decay=1.0):$/;"	f
 q_learning	TD/QLearning.py	/^def q_learning(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):$/;"	f
+random	Cartpole/cartpole.py	/^import random$/;"	i
+random	Cartpole/cartpole1.py	/^import random$/;"	i
+random	Cartpole/cartpole_reproduce.py	/^import random$/;"	i
 random	DQN/dqn.py	/^import random$/;"	i
 random_policy	DP/PolicyEvaluation.py	/^random_policy = np.ones([env.nS, env.nA]) \/ env.nA$/;"	v
 random_policy	MC/MonteCarloOffPolicy.py	/^random_policy = create_random_policy(env.action_space.n)$/;"	v
 reinforce	PolicyGradient/ReinforceBaseline.py	/^def reinforce(env, estimator_policy, estimator_value, num_episodes, discount_factor=1.0):$/;"	f
 replay_memory_init_size	DQN/dqn.py	/^                                    replay_memory_init_size=50000,$/;"	v
 replay_memory_size	DQN/dqn.py	/^                                    replay_memory_size=500000,$/;"	v
+results	Cartpole/cartpole_reproduce.py	/^results = []$/;"	v
+reward	Cartpole/cartpole_reproduce.py	/^        reward = run_episode(env, policy_grad, value_grad, sess, True)$/;"	v
+reward	Cartpole/cartpole_reproduce.py	/^    reward = run_episode(env, policy_grad, value_grad, sess)$/;"	v
 run	PolicyGradient/a3c/worker.py	/^  def run(self, sess, coord, t_max):$/;"	m	class:Worker
+run_episode	Cartpole/cartpole_reproduce.py	/^def run_episode(env, policy_grad, value_grad, sess, render=False):$/;"	f
 run_n_steps	PolicyGradient/a3c/worker.py	/^  def run_n_steps(self, n, sess):$/;"	m	class:Worker
 sample_policy	MC/MonteCarloPrediction.py	/^def sample_policy(observation):$/;"	f
 sarsa	TD/Sarsa.py	/^def sarsa(env, num_episodes, discount_factor=1.0, alpha=0.5, epsilon=0.1):$/;"	f
@@ -377,21 +457,29 @@ saver	PolicyGradient/a3c/train.py	/^  saver = tf.train.Saver(keep_checkpoint_eve
 scaler	FA/QLearningwithValueFuncApprox.py	/^scaler = sklearn.preprocessing.StandardScaler()$/;"	v
 score	lib/envs/blackjack.py	/^def score(hand):  # What is the score of this hand (0 if bust)$/;"	f
 seeding	lib/envs/blackjack.py	/^from gym.utils import seeding$/;"	i
+sess	Cartpole/cartpole_reproduce.py	/^sess = tf.InteractiveSession()$/;"	v
 setUp	PolicyGradient/a3c/policy_monitor_test.py	/^  def setUp(self):$/;"	m	class:PolicyMonitorTest
 setUp	PolicyGradient/a3c/worker_test.py	/^  def setUp(self):$/;"	m	class:WorkerTest
 shutil	PolicyGradient/a3c/train.py	/^import shutil$/;"	i
 sklearn	FA/QLearningwithValueFuncApprox.py	/^import sklearn.pipeline$/;"	i
 sklearn	FA/QLearningwithValueFuncApprox.py	/^import sklearn.preprocessing$/;"	i
+softmax	Cartpole/cartpole_reproduce.py	/^def softmax(x):$/;"	f
 spaces	lib/envs/blackjack.py	/^from gym import spaces$/;"	i
 state_processor	DQN/dqn.py	/^                                    state_processor=state_processor,$/;"	v
 state_processor	DQN/dqn.py	/^state_processor = StateProcessor()$/;"	v
+stats	Cartpole/cartpole.py	/^    stats = actor_critic(env, policy_estimator, value_estimator, 1000)$/;"	v
+stats	Cartpole/cartpole1.py	/^    stats = actor_critic(env, policy_estimator, value_estimator, 200)$/;"	v
 stats	FA/QLearningwithValueFuncApprox.py	/^stats = q_learning(env, estimator, 100, epsilon=0.0)$/;"	v
+stats	PolicyGradient/AC.py	/^    stats = actor_critic(env, policy_estimator, value_estimator, 300)$/;"	v
 stats	PolicyGradient/ReinforceBaseline.py	/^    stats = reinforce(env, policy_estimator, value_estimator, 2000, discount_factor=1.0)$/;"	v
 step	lib/atari/helpers.py	/^  def step(self, *args, **kwargs):$/;"	m	class:AtariEnvWrapper
+submit	Cartpole/cartpole_reproduce.py	/^submit = True$/;"	v
 sum_hand	lib/envs/blackjack.py	/^def sum_hand(hand):  # Return current hand total$/;"	f
 summary_writer	PolicyGradient/a3c/train.py	/^      summary_writer=worker_summary_writer,$/;"	v
 summary_writer	PolicyGradient/a3c/train.py	/^    summary_writer=summary_writer,$/;"	v
 summary_writer	PolicyGradient/a3c/train.py	/^summary_writer = tf.summary.FileWriter(os.path.join(MODEL_DIR, "train"))$/;"	v
+sys	Cartpole/cartpole.py	/^import sys$/;"	i
+sys	Cartpole/cartpole1.py	/^import sys$/;"	i
 sys	DP/PolicyEvaluation.py	/^import sys$/;"	i
 sys	DP/PolicyIteration.py	/^import sys$/;"	i
 sys	DP/ValueIteration.py	/^import sys$/;"	i
@@ -400,6 +488,7 @@ sys	FA/QLearningwithValueFuncApprox.py	/^import sys$/;"	i
 sys	MC/MonteCarloEpsilonGreedy.py	/^import sys$/;"	i
 sys	MC/MonteCarloOffPolicy.py	/^import sys$/;"	i
 sys	MC/MonteCarloPrediction.py	/^import sys$/;"	i
+sys	PolicyGradient/AC.py	/^import sys$/;"	i
 sys	PolicyGradient/ReinforceBaseline.py	/^import sys$/;"	i
 sys	PolicyGradient/a3c/estimator_test.py	/^import sys$/;"	i
 sys	PolicyGradient/a3c/policy_monitor.py	/^import sys$/;"	i
@@ -413,6 +502,7 @@ sys	TD/WindyGridWorldEnv.py	/^import sys$/;"	i
 sys	lib/envs/cliff_walking.py	/^import sys$/;"	i
 sys	lib/envs/gridworld.py	/^import sys$/;"	i
 sys	lib/envs/windy_gridworld.py	/^import sys$/;"	i
+t	Cartpole/cartpole_reproduce.py	/^t = 0$/;"	v
 t	PolicyGradient/a3c/train.py	/^    t = threading.Thread(target=worker_fn)$/;"	v
 target_estimator	DQN/dqn.py	/^                                    target_estimator=target_estimator,$/;"	v
 target_estimator	DQN/dqn.py	/^target_estimator = Estimator(scope="target_q")$/;"	v
@@ -425,7 +515,11 @@ testPredict	PolicyGradient/a3c/estimator_test.py	/^  def testPredict(self):$/;"	
 testPredict	PolicyGradient/a3c/estimator_test.py	/^  def testPredict(self):$/;"	m	class:ValueEstimatorTest
 testRunNStepsAndUpdate	PolicyGradient/a3c/worker_test.py	/^  def testRunNStepsAndUpdate(self):$/;"	m	class:WorkerTest
 testValueNetPredict	PolicyGradient/a3c/worker_test.py	/^  def testValueNetPredict(self):$/;"	m	class:WorkerTest
+tf	Cartpole/cartpole.py	/^import tensorflow as tf$/;"	i
+tf	Cartpole/cartpole1.py	/^import tensorflow as tf$/;"	i
+tf	Cartpole/cartpole_reproduce.py	/^import tensorflow as tf$/;"	i
 tf	DQN/dqn.py	/^import tensorflow as tf$/;"	i
+tf	PolicyGradient/AC.py	/^import tensorflow as tf$/;"	i
 tf	PolicyGradient/ReinforceBaseline.py	/^import tensorflow as tf$/;"	i
 tf	PolicyGradient/a3c/estimator_test.py	/^import tensorflow as tf$/;"	i
 tf	PolicyGradient/a3c/estimators.py	/^import tensorflow as tf$/;"	i
@@ -441,15 +535,26 @@ unittest	PolicyGradient/a3c/estimator_test.py	/^import unittest$/;"	i
 unittest	PolicyGradient/a3c/policy_monitor_test.py	/^import unittest$/;"	i
 unittest	PolicyGradient/a3c/train.py	/^import unittest$/;"	i
 unittest	PolicyGradient/a3c/worker_test.py	/^import unittest$/;"	i
+update	Cartpole/cartpole.py	/^    def update(self, state, target, action, sess=None):$/;"	m	class:PolicyEstimator
+update	Cartpole/cartpole.py	/^    def update(self, state, target, sess=None):$/;"	m	class:ValueEstimator
+update	Cartpole/cartpole1.py	/^    def update(self, state, target, action, sess=None):$/;"	m	class:PolicyEstimator
+update	Cartpole/cartpole1.py	/^    def update(self, state, target, sess=None):$/;"	m	class:ValueEstimator
 update	DQN/dqn.py	/^    def update(self, sess, s, a, y):$/;"	m	class:Estimator
 update	FA/QLearningwithValueFuncApprox.py	/^    def update(self, s, a, y):$/;"	m	class:Estimator
+update	PolicyGradient/AC.py	/^    def update(self, state, target, action, sess=None):$/;"	m	class:PolicyEstimator
+update	PolicyGradient/AC.py	/^    def update(self, state, target, sess=None):$/;"	m	class:ValueEstimator
 update	PolicyGradient/ReinforceBaseline.py	/^    def update(self, state, target, action, sess=None):$/;"	m	class:PolicyEstimator
 update	PolicyGradient/ReinforceBaseline.py	/^    def update(self, state, target, sess=None):$/;"	m	class:ValueEstimator
 update	PolicyGradient/a3c/worker.py	/^  def update(self, transitions, sess):$/;"	m	class:Worker
 update_target_estimator_every	DQN/dqn.py	/^                                    update_target_estimator_every=10000,$/;"	v
 usable_ace	lib/envs/blackjack.py	/^def usable_ace(hand):  # Does this hand have a usable ace?$/;"	f
 v	DP/PolicyEvaluation.py	/^v = policy_eval(random_policy, env)$/;"	v
+value_estimator	Cartpole/cartpole.py	/^value_estimator = ValueEstimator()$/;"	v
+value_estimator	Cartpole/cartpole1.py	/^value_estimator = ValueEstimator()$/;"	v
+value_estimator	PolicyGradient/AC.py	/^value_estimator = ValueEstimator()$/;"	v
 value_estimator	PolicyGradient/ReinforceBaseline.py	/^value_estimator = ValueEstimator()$/;"	v
+value_grad	Cartpole/cartpole_reproduce.py	/^value_grad = value_gradient()$/;"	v
+value_gradient	Cartpole/cartpole_reproduce.py	/^def value_gradient():$/;"	f
 value_iteration	DP/ValueIteration.py	/^def value_iteration(env, theta=0.0001, discount_factor=1.0):$/;"	f
 value_net	PolicyGradient/a3c/train.py	/^      value_net=value_net,$/;"	v
 value_net	PolicyGradient/a3c/train.py	/^    value_net = ValueEstimator(reuse=True)$/;"	v

@@ -94,3 +94,4 @@ ENV/
 # Temporary data
 .ipynb_checkpoints/
 ctags
+tags
